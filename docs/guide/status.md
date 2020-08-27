@@ -1,15 +1,9 @@
 # Status
 
-Status pembayaran dapat diperoleh dengan melakukan `GET` request ke `/status/:id`, dengan _querystring_ `pid` dan `pat`.
+Status pembayaran dapat diperoleh dengan melakukan `GET` request ke `/status/:id`, dengan _querystring_  `nob`.
 
 ```bash
 curl "/status/0123456789?nob=002008260001"
-```
-
-Jika request saat pembayaran terputus dan `pat` tidak berhasil didapatkan, `pat` dapat diganti dengan `inq` token
-
-```bash
-curl "/status/0123456789?pid=abc&inq=qwerty"
 ```
 
 ## Created 201
