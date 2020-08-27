@@ -72,8 +72,8 @@ x-message: Terimakasih telah membayar tagihan tepat waktu [TODO]
       "id": "1234010101010101",
       "periode": "202005",
       "meter": {
-        "lalu": 496,
-        "kini": 501,
+        "awal": 496,
+        "akhir": 501,
         "pakai": 10
       },
       "biaya": {
