@@ -44,7 +44,21 @@ curl -X POST \
 
 ## Response
 
-Response dari pembayaran juga menghasilkan header `x-advice-url` yang bisa digunakan untuk pengecekan status pembayaran jika tidak menggunakan fitur [webhook](/guide/webhook.html).
+Berikut adalah contoh dari response pembayaran berhasil.
+
+Ada beberapa field yang harus diperhatikan, diantaranya
+- field `message` pada body `[a-zA-Z]{1,64}`
+
+Field ini digunakan untuk pesan dari PDAM kepada pelanggan yang kemudian bisa dicetak di semua atau lembar rekening terakhir.
+
+- field `data.nob` pada body `[0-9]{12}`
+
+Field ini digunakan sebagai bukti bahwa proses pembayaran sudah dilakukan dan harus tercantum di lembar rekening.
+
+- field `x-advice-url` pada header
+
+Field ini berisi url yang bisa digunakan untuk pengecekan status pembayaran jika tidak menggunakan fitur [webhook](/guide/webhook.html).
+
 
 ```json
 /** 202 Accepted
@@ -54,6 +68,7 @@ x-advice-url: /status/010101010101?nob=002008260001
 */
 {
   "status": "accepted",
+  "message": "Bayarlah tagihan tepat waktu untuk menghindari denda",
   "data": {
     "cid": "010101002004",
     "pid": "8ab1ef54-49a9-4bd7-a316-da885a0735eb",
@@ -77,10 +92,6 @@ x-advice-url: /status/010101010101?nob=002008260001
   }
 }
 ```
-
-::: danger
-`nob` harus dilampirkan pada cetakan rekening.
-:::
 
 ::: tip
 `pts` adalah timestamp untuk waktu pembayaran dalam format milidetik.
