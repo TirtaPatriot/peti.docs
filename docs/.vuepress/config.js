@@ -27,7 +27,7 @@ module.exports = {
             // 'reversal',
             'status',
             'webhook',
-            // 'reconsiliation',
+            'reconsiliation',
             'error',
           ]
         }
