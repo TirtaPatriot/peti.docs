@@ -8,6 +8,7 @@ module.exports = {
     lastUpdated: true,
     repo: 'TirtaPatriot/peti.docs',
     docsDir: 'docs',
+    docsBranch: 'patriot',
     editLinks: true,
     nav: [
       { text: 'Home', link: '/' },
