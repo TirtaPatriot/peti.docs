@@ -6,7 +6,7 @@ module.exports = {
   ],
   themeConfig: {
     lastUpdated: true,
-    repo: 'TirtaPatriot/peti',
+    repo: 'TirtaPatriot/peti.docs',
     docsDir: 'docs',
     editLinks: true,
     nav: [
