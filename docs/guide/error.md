@@ -41,4 +41,4 @@ Muncul saat data pada `inq` token tidak valid.
 
 ## 503 Service Unavailable
 
-Muncul saat terjadi kesalahan pada koneksi server _Job Server_, _Database Server_ dan _Token Server_
+Muncul saat terjadi kesalahan pada koneksi server _Job Server_, _Database Server_ atau _Token Server_
