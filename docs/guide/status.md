@@ -1,6 +1,6 @@
 # Status
 
-Status pembayaran dapat diperoleh dengan melakukan `GET` request ke `/status/:id`, dengan _querystring_  `nob`.
+Status pembayaran dapat diperoleh dengan melakukan `GET` request ke `/status/:id`, dengan _querystring_  `nob` atau `pid`.
 
 ```bash
 curl "/status/0123456789?nob=002008260001"
